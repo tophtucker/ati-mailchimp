@@ -10,20 +10,23 @@
         <style type="text/css">
             <!-- body {
                 background-color: #FFFFFF;
-                font-family: verdana;
-                font-size: 12px;
+                font-family: Georgia;
+                font-size: 20px;
                 text-align: center;
                 min-width: 500px;
                 margin: 50 0 0 0;
             }
 
-            p {
-                line-height: 18px;
-            }
+            /* --brown: #5e4c3c; --tan: #ffeacc; */
 
             label {
                 display: block;
-                font-size: 13px;
+                /* font-size: 13px; */
+            }
+
+            input {
+                font-family: inherit;
+                font-size: inherit;
             }
 
             .subfield label {
@@ -48,27 +51,28 @@
             }
 
             .container {
-                background-color: #FFFFFF;
-                width: 400px;
-                border: 1px solid #999999;
+                background-color: #ffeacc;
+                max-width: 500px;
+                border: 1px solid #5e4c3c;
+                border-radius: 5px;
                 padding: 5 5 15 5;
                 margin-left: auto;
                 margin-right: auto;
             }
 
             .pageTitle {
-                background-color: #DDDDDD;
                 padding: 8px;
+                padding-bottom: 2em;
                 font-size: 16px;
                 font-weight: bold;
                 color: #000000;
-                text-align: left;
+                text-align: center;
             }
 
             .pageTitleAlert {
                 background-color: #FF0000;
                 padding: 8px;
-                font-size: 16px;
+                /* font-size: 16px; */
                 font-weight: bold;
                 color: #FFFFFF;
                 text-align: left;
@@ -77,25 +81,34 @@
             .pageTitleSuccess {
                 background-color: #33CC00;
                 padding: 8px;
-                font-size: 16px;
+                /* font-size: 16px; */
                 font-weight: bold;
                 color: #FFFFFF;
                 text-align: left;
             }
 
+            table {
+                font-size: 1em;
+            }
+
             .formLabel {
-                font-size: 13px;
+                /* font-size: 13px; */
                 vertical-align: top;
+                padding-top: 8px;
             }
 
             .error {
                 color: #FF0000;
                 font-weight: bold;
-                font-size: 11px;
+                /* font-size: 11px; */
             }
 
             .small {
-                font-size: 11px;
+                font-size: smaller;
+            }
+
+            .submitWrapper {
+                padding-top: 1em;
             }
 
             -->
@@ -104,8 +117,12 @@
 
     <body>
         <div class="container">
-            <div class="pageTitle">Apple Tree Inn</div>
-            <p>Required fields are <b>bold...</b></p>
+            <div class="pageTitle">
+                <img
+                    src="https://appletreeinnlenox.com/logo-straight.png"
+                    height="50"
+                />
+            </div>
             <form
                 action="https://appletreeinnlenox.us19.list-manage.com/subscribe/post"
                 method="post"
@@ -123,9 +140,7 @@
                     align="center"
                 >
                     <tr>
-                        <td align="right" class="formLabel">
-                            Email Address <span class="req asterisk">*</span>:
-                        </td>
+                        <td align="right" class="formLabel">Email</td>
                         <td align="left">
                             <input
                                 type="email"
@@ -141,7 +156,7 @@
                     </tr>
 
                     <tr>
-                        <td align="right" class="formLabel">First Name:</td>
+                        <td align="right" class="formLabel">First name</td>
                         <td align="left">
                             <input
                                 type="text"
@@ -155,7 +170,7 @@
                     </tr>
 
                     <tr>
-                        <td align="right" class="formLabel">Last Name:</td>
+                        <td align="right" class="formLabel">Last name</td>
                         <td align="left">
                             <input
                                 type="text"
@@ -168,7 +183,7 @@
                         </td>
                     </tr>
 
-                    <tr>
+                    <!-- <tr>
                         <td align="right" class="formLabel">Address:</td>
                         <td align="left">
                             <div class="field-wrapper">
@@ -707,9 +722,9 @@
                             </div>
                             <div class="error">*|HTML:ADDRESSERROR|*</div>
                         </td>
-                    </tr>
+                    </tr> -->
 
-                    <tr>
+                    <!-- <tr>
                         <td align="right" class="formLabel">Phone Number:</td>
                         <td align="left">
                             <input
@@ -721,10 +736,10 @@
                             />
                             <div class="error">*|HTML:PHONEERROR|*</div>
                         </td>
-                    </tr>
+                    </tr> -->
 
                     <tr>
-                        <td align="right" class="formLabel">Birthday:</td>
+                        <td align="right" class="formLabel">Birthday</td>
                         <td align="left">
                             <div class="birthdayfield subfields borderbox">
                                 <span class="subfield monthfield"
@@ -735,7 +750,7 @@
                                         id="MERGE5-month"
                                         name="MERGE5[month]"
                                         maxlength="2"
-                                        size="2"
+                                        size="3"
                                         value=""
                                         placeholder="MM"
                                 /></span>
@@ -748,7 +763,7 @@
                                         id="MERGE5-day"
                                         name="MERGE5[day]"
                                         maxlength="2"
-                                        size="2"
+                                        size="3"
                                         value=""
                                         placeholder="DD"
                                 /></span>
@@ -757,7 +772,7 @@
                         </td>
                     </tr>
 
-                    <tr>
+                    <!-- <tr>
                         <td align="right" class="formLabel">Company:</td>
                         <td align="left">
                             <input
@@ -769,34 +784,31 @@
                             />
                             <div class="error">*|HTML:COMPANYERROR|*</div>
                         </td>
-                    </tr>
-
-                    <tr>
-                        <td align="right">&nbsp;</td>
-                        <td align="left">
-                            <!--IF you want this to work with our Facebook app, your submit button *must* start with this: <input type="submit"
-                            and end with a >. You can have whatever else you'd like in the rest of the tag, and we'll maintain any custom "value" you set.-->
-                            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                            <div
-                                style="position: absolute; left: -5000px"
-                                aria-hidden="true"
-                            >
-                                <input
-                                    type="text"
-                                    name="b_0e2051740f0e8e07588b8b1ce_7c3030910a"
-                                    tabindex="-1"
-                                    value=""
-                                />
-                            </div>
-                            <input
-                                type="submit"
-                                class="button"
-                                name="submit"
-                                value="Subscribe"
-                            />
-                        </td>
-                    </tr>
+                    </tr> -->
                 </table>
+
+                <div class="submitWrapper">
+                    <!--IF you want this to work with our Facebook app, your submit button *must* start with this: <input type="submit"
+                    and end with a >. You can have whatever else you'd like in the rest of the tag, and we'll maintain any custom "value" you set.-->
+                    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                    <div
+                        style="position: absolute; left: -5000px"
+                        aria-hidden="true"
+                    >
+                        <input
+                            type="text"
+                            name="b_0e2051740f0e8e07588b8b1ce_7c3030910a"
+                            tabindex="-1"
+                            value=""
+                        />
+                    </div>
+                    <input
+                        type="submit"
+                        class="button"
+                        name="submit"
+                        value="Subscribe to our newsletter"
+                    />
+                </div>
             </form>
         </div>
     </body>
